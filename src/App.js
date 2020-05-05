@@ -19,7 +19,7 @@ class App extends React.Component {
         this.props.engineLoaderMazaFucker("prices");
         this.props.engineLoaderMazaFucker("categories");
 
-        if (localStorage.length === 0) {
+        if (localStorage.cartInfo === undefined) {
             localStorage.setItem(`cartInfo`, JSON.stringify([])); // если новая машина и локалсторож пуст
         } else {
             this.props.updateCart(JSON.parse(localStorage.getItem('cartInfo'))); // иначе копируем корзину локалсторожа в state
